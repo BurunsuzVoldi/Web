@@ -1,18 +1,130 @@
+/* style.css */
+
+/* Genel stiller */
 body {
-    font-family: Arial, sans-serif; /* Yazı tipi ailesi */
-    font-size: 11px; /* <p></p> etiketindeki ana yazının boyutu */
-    background-color: #f0f0f0; /* Web sayfasının arka plan rengi */
-    color: #333333; /* Metin rengi */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-h1 {
-    color: hsl(0, 100%, 50%); /* Başlık rengi */
-    font-size: 24px; /* Başlık yazı tipi boyutu */
-    font-family: Georgia, serif; /* Başlıkta kullanılan yazı tipi ailesi */
+/* Başlık ve paragraf stilleri */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Ana içerik stilleri */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+/* Görsellerin stil ayarları */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+/* Liste stilleri */
 ul {
-    color: #ff0000; /* Başlık rengi */
-    font-size: 16px; /* Başlık yazı tipi boyutu */
-    font-family: Georgia, serif; /* Başlıkta kullanılan yazı tipi ailesi */
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Alıntı stili */
+blockquote {
+    background: #f9f9f9;
+    border-left: 5px solid #0056b3;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* Form stilleri */
+form {
+    margin-top: 1.5rem;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: inline-block;
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background: #004494;
+}
+
+/* Footer stili */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
