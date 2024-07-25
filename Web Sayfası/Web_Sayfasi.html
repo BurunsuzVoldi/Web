@@ -1,84 +1,63 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teknoloji Bağımlılığı</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Teknoloji Bağımlılığı</h1>
-        <p>Günümüz dünyasında teknoloji, hayatımızın ayrılmaz bir parçası haline geldi. Ancak aşırı kullanım, bağımlılık yaratabilir. Bu sayfada teknoloji bağımlılığına dair bilgilere ve çözüm önerilerine ulaşabilirsiniz.</p>
-    </header>
+import discord
+from discord.ext import commands
+import random
 
-    <main>
-        <section>
-            <h2>Teknoloji Bağımlılığı Nedir?</h2>
-            <p>Teknoloji bağımlılığı, bireylerin belirli teknolojilere ve cihazlara aşırı derecede bağımlı hale gelmesidir. Bu bağımlılık, kişinin günlük yaşamını, iş hayatını ve sosyal ilişkilerini olumsuz etkileyebilir. Teknoloji bağımlılığı, dijital cihazlar, sosyal medya, oyunlar gibi çeşitli alanlarda kendini gösterebilir.</p>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQYAAADACAMAAADRLT0TAAAAaVBMVEX///8ZGRkAAAB7e3sYGBh3d3d+fn4GBga/v7/KyspfX18MDAwbGxufn58WFhb8/PwRERGZmZnh4eHv7+/X19dqampKSkojIyPQ0NCSkpK6urr19fVGRkZPT0+kpKQ+Pj5lZWWwsLA1NTXCA1ZsAAADNElEQVR4nO3da2/aMBiGYeIY0i6uCQNKNsph/f8/cs5Dth4I3RKQUr29L2mdNrUSvmcb2AfeyQQAAAAAAAAAAAAAAPQ0H/sBfBJ0EHsZlvV9X3W9HPtR39R8slpvStdbuVmvxn7st7RwLsbgs16897FwD+lgzG0cjh8uht4VMh+aL25hJMLkp4tZ8H0rhKrKQkwd7mxcldunqtnh4e0i01/E86X77G+tareLTbvqcTv2Cm6idulEvF/whQuzevnWcr0um4PkXT32Cm5CN8O7CtVu/9Bhv3u5QkJR+tj8wS1MHIq8YzfEw2yaT8/kh5dePvigJm429gpuYlo0uyFkb+7IWJRFeaZ41StdJv6UIR97BTcxdenG77ge/ksKYShD+oft3SG9fPLpJy1liL6szs/AvzUhDGUI2bdBoqkMfuhSpmU0lWE27Lk/d95YhkHycvhO+mSuysBuaOSFpSdMMpChRQYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQgYhg5BByCBkEDIIGYQMQga5LoOlz6C/IkMwlWHgUvLS8znTp9kWZJjMnKVDkcXD3SCHaOlTx4Ov+o96a0RbQ1v6zvZqp5Xod0MZstDfnxyGMgzcDf4rZPDNVET5cDyi+Qwhq9rBPkV5eVdYzxB8sWtH9Rwfi6+boVyfZl2mr9v1xf1gJUPhL5x896v9lhRj7/yF+V9GMnSN/nuXIXXYu2A7Q9cgyNOheL0bHppXF90ZFqM+/FupXda93331vPreWj1XFw6FlbGg20MVYjvb8q0YXaG3DkUzF/U8gH5VTzaGxE7u0qkIPna+Xvatjlfb6dRYGhms2yEtyXe+a/jwXUUz+G8xtzJBOnVoxomf35Hh0rPD6VDE0zhxIx3SIurjZsD/NhSbo6nh8smyvu+tXo79qD8HE4fhalRozOkAAAAAAAAAAAAAAPjqfgO4CDoS7mjX6gAAAABJRU5ErkJggg==" alt="Teknoloji Bağımlılığı" />
-        </section>
+intents = discord.Intents.default()
+intents.message_content = True
 
-        <section>
-            <h2>En Yaygın Teknoloji Bağımlılıkları</h2>
-            <ul>
-                <li>Sosyal medya ve mesajlaşma: İnsanlar sosyal medyada ve mesajlaşma uygulamalarında çok fazla zaman harcayarak gerçek dünyada geçirdikleri zamanı azaltabilirler. Dahası, bu durum haber ve mesaj güncellemelerine bağımlılığa yol açar.</li>
-                <li>Akıllı telefonlar ve tabletler: Akıllı telefonlar ve tabletler insanlar için dünyayla iletişim kurmanın temel yolu haline gelebilir ve insanlar bildirimleri sürekli kontrol etme, retweet yapma ve sosyal medya ve mesajlaşma uygulamalarında gezinme konusunda bağımlı hale gelebilirler.</li>
-                <li>Oyunlar ve çevrimiçi eğlence: Oyunlar ve çevrimiçi eğlence bağımlılık yapabilir, bu da insanların gerçek hayat yerine sanal dünyada çok fazla zaman harcamalarına neden olabilir.</li>
-                <li>İnternet alışverişi ve çevrimiçi alışveriş: İnsanlar duygusal ihtiyaçlarını karşılamak için çevrimiçi alışverişe bağımlı hale gelebilirler.</li>
-                <li>Online video ve yayın hizmetleri: İnsanlar video barındırma sitelerinde ve yayın hizmetlerinde çok fazla zaman harcayabilirler, bu da zaman kaybına ve gerçek dünyaya olan ilginin azalmasına neden olabilir.</li>
-                <li>Bilgisayar programları ve uygulamalar: İnsanlar, iş veya eğitimlerinden dikkatlerini dağıtabilecek belirli programlara ve uygulamalara bağımlı hale gelebilirler.</li>
-                <li>Yapay Zeka Teknolojileri: İnsanlar yapay zeka teknolojilerini aşırı kullanarak iletişim ve karar verme becerilerini kaybedebilirler.</li>
-                <li>Kripto Paralar ve Blok Zincirleri: Kripto paralar ve blok zincirleri teknolojileri aşırı ilgi, finansal istikrarsızlık ve gerçek dünyadaki ilgi kaybına yol açabilirler.</li>
-                <li>Sanal ve artırılmış gerçeklik teknolojileri: İnsanlar, sanal ve artırılmış gerçeklik teknolojilerinin kullanımına bağımlı hale gelebilir, bu da gerçek dünyaya olan ilginin azalmasına ve iletişim becerilerinin kötüleşmesine yol açabilir.</li>
-            </ul>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wizxAQ6fOSZlXGaa523MhGRTkm2rdeGiHPOlw7TVbvB0F6ey" alt="Teknoloji Bağımlılıkları" />
-        </section>
+bot = commands.Bot(command_prefix='$', intents=intents)
 
-        <section>
-            <h2>Teknoloji Bağımlılığının Çözümleri</h2>
-            <p>Peki, teknoloji bağımlılığına karşı ne tür çözümler uygulayabiliriz? İşte bazı öneriler:</p>
-            <ul>
-                <li>İnternet ve cihazlarınızda geçirdiğiniz zamanı sınırlayın.</li>
-                <li>Teknoloji kullanımı dışında çeşitli ilgi alanları ve aktiviteler edinin.</li>
-                <li>Sosyal medya ve mesajlaşma uygulamalarına olan bağımlılığınızı azaltmak için çevrenizle bağlantı kurmanın yeni yollarını arayın.</li>
-                <li>Mümkünse, bilgisayar başında geçirdiğiniz çalışma süresini sınırlayın ve mola verin. Bu, gözlerinizdeki stresi azaltacak ve bir sonraki çalışma oturumuna geçmeden zihninizin boşalmasına yardımcı olacaktır.</li>
-                <li>Mümkün olduğunda, teknolojiden uzak geçireceğiniz zaman dilimleri ayarlayarak rahatlamak ve gevşemek için fırsat yaratın.</li>
-                <li>Teknolojiyi daha bilinçli kullanmaya çalışın. Arada bir kendinize şu soruyu sorun: Teknolojiye çok mu bağımlı hale geliyorum?</li>
-            </ul>
-        </section>
+@bot.event
+async def on_ready():
+    print(f'{bot.user} olarak giriş yaptık')
 
-        <section>
-            <h2>Teknoloji Bağımlılığı İstatistikleri</h2>
-            <ul>
-                <li><strong>Türkiye'de sosyal medya kullanıcılarının %80'i günde en az 2 saat harcıyor.</strong></li>
-                <li><strong>Amerika Birleşik Devletleri'nde gençlerin %50'si günde 5 saatten fazla ekran başında vakit geçiriyor.</strong></li>
-                <li><strong>Çin'de gençlerin %60'ı online oyun bağımlılığı yaşıyor.</strong></li>
-                <li><strong>Günümüzde dünya genelinde internet kullanıcılarının %40'ı online alışveriş yapıyor.</strong></li>
-            </ul>
-        </section>
+# Çevre Oyunu
+questions = [
+    {"question": "Hangi enerji kaynağı yenilenebilir değildir?", "options": ["Güneş", "Rüzgar", "Kömür"], "answer": "Kömür"},
+    {"question": "Hangi madde geri dönüştürülemez?", "options": ["Cam şişe", "Plastik şişe", "Strafor"], "answer": "Strafor"},
+    {"question": "Hangisi karbon ayak izini azaltmak için yapılabilir?", "options": ["Araba kullanmak", "Bisiklet sürmek", "Fazla tüketim"], "answer": "Bisiklet sürmek"}
+]
 
-        <section>
-            <h2>Alıntı</h2>
-            <blockquote>
-                <p>"Teknoloji, hayatı daha iyi hale getirebilir, ama onu akıllıca kullanmak gerekir." - <strong>Bill Gates</strong></p>
-            </blockquote>
-        </section>
+@bot.command(name='oyun')
+async def quiz(ctx):
+    question = random.choice(questions)
+    options = "\n".join([f"{i+1}. {opt}" for i, opt in enumerate(question["options"])])
+    await ctx.send(f"{question['question']}\n{options}")
 
-        <section>
-            <h2>Yorumlar</h2>
-            <form action="#" method="post">
-                <label for="name">Adınız:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="comment">Yorumunuz:</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
-                <button type="submit">Yorum Gönder</button>
-            </form>
-        </section>
-    </main>
+    def check(m):
+        return m.author == ctx.author and m.channel == ctx.channel and m.content.isdigit()
 
-    <footer>
-        <p>Kaynaklar: <a href="https://www.who.int/news-room/fact-sheets/detail/addictive-behaviours" target="_blank">Dünya Sağlık Örgütü</a> | <a href="https://www.techradar.com/news/the-effects-of-tech-addiction" target="_blank">TechRadar</a></p>
-    </footer>
-</body>
-</html>
+    try:
+        msg = await bot.wait_for("message", check=check, timeout=15.0)
+        if question["options"][int(msg.content) - 1].lower() == question["answer"].lower():
+            await ctx.send("Doğru cevap!")
+        else:
+            await ctx.send(f"Yanlış cevap! Doğru cevap: {question['answer']}")
+    except:
+        await ctx.send("Cevaplama süresi doldu.")
+
+# Karbon Ayak İzi Testi
+@bot.command(name='karbon')
+async def carbon_footprint(ctx):
+    questions = [
+        ("Günde kaç kilometre araba kullanıyorsunuz?", 0.2),
+        ("Günde kaç kilovat saat elektrik harcıyorsunuz?", 0.5),
+        ("Haftada kaç kez et yiyorsunuz?", 1.5)
+    ]
+
+    total_score = 0
+
+    def check(m):
+        return m.author == ctx.author and m.channel == ctx.channel and m.content.isdigit()
+
+    try:
+        for q, factor in questions:
+            await ctx.send(q)
+            msg = await bot.wait_for("message", check=check, timeout=30.0)
+            total_score += int(msg.content) * factor
+
+        await ctx.send(f"Karbondioksit ayak iziniz: {total_score:.2f} kg CO2")
+    except:
+        await ctx.send("Cevaplama süresi doldu.")
+
+bot.run('YOUR_DISCORD_BOT_TOKEN')
